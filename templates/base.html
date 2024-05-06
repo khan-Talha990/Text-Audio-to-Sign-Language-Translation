@@ -1,0 +1,369 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body
+    {
+      background-color: #011627
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      width: 50%;
+      padding-top: 10px;
+      border-top-left-radius: 25cap;
+      border-top-right-radius: 25cap;
+      border-bottom-left-radius: 25cap;
+      border-bottom-right-radius: 25cap;
+      overflow: hidden;
+    }
+
+    /* VIDEOPLAYER */
+    .videoplayer{
+      border-radius: 50px;
+      align-items: center;
+    }
+    /* VIDEOPLAYER */
+
+
+
+    .heading{
+      background-color:#011627;
+      color:#feda6a;
+      font-size: 25px;
+      font-weight: bold;
+      padding:10 10 1 10;
+      border: 2.5px #feda6a groove;
+      border-radius: 20px;
+      margin-bottom:0;
+    }
+
+    h2
+    {
+      color: #feda6a;
+    }
+    
+    /* NAVBAR */
+
+    .container{
+    margin: 0 auto;
+	  padding: 1rem 2rem;
+  	text-align: left;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    }
+
+    .container a{
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    /* font: 90px ; */
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    }
+
+    .nav {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #53D8FB;
+    }
+
+    .nav a:before{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+    }
+
+    .nav a:hover:before{
+    height: 100%;
+    }
+    /* NAVBAR */
+    
+    /* HOME BUTTON  */
+    .button-85 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      font-weight: bolder;
+      padding: 20px 50px 20px 50px;
+      border: none;
+      outline: none;
+      color: rgb(255, 255, 255);
+      background: #8bc34a;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      margin-top: 20px;
+      border-radius: 10px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .button-85:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing-button-85 20s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    @keyframes glowing-button-85 {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .button-85:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #8bc34a;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    /* HOME BUTTON */
+
+    .form-style button{
+    
+      }
+    
+    .form-style button:hover {
+      
+    }
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 50;
+      overflow-x: hidden;
+      padding-top: 20px;
+    
+    }
+    
+    .left {
+      left: 15;
+      border-right: 0px #feda6a solid;
+    }
+    
+    .right {
+      right: 0;
+      border-left: 1px #feda6a solid;
+    }
+    
+    .mytext {
+        border:1px solid #393f4d;
+        border-right:none;
+        padding:4px;
+        margin:0px;
+        float:left;
+        height:32px;
+        overflow:hidden;
+        line-height:16px;
+        width: 300px;
+        margin-left: 54px;
+        border-radius: 20px;
+      }
+    
+      .mic {
+          border:1px solid #393f4d;
+          background:#feda6a;
+          vertical-align:top;
+          padding:0;
+          margin: 1px;
+          margin-left: 3px;
+          float:left;
+          height:42px;
+          overflow:hidden;
+          width:5em;
+          text-align:center;
+          line-height:16px;
+          border-radius: 70px;
+      }
+      
+    
+    .submit {
+      background-color: #fff;
+      border: 0 solid #e2e8f0;
+      border-radius: 1.5rem;
+      box-sizing: border-box;
+      color: #0d172a;
+      cursor: pointer;
+      display: inline-block;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1;
+      padding: 13px 20px 13px 20px;
+      text-align: center;
+      text-decoration: none #0d172a solid;
+      text-decoration-thickness: auto;
+      transition: all .1s cubic-bezier(.4, 0, .2, 1);
+      box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    .submit:hover {
+      background-color: #1e293b;
+      color: #fff;
+    }
+    .td {
+      color: #feda6a;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    
+    body
+    {
+      background-color: #011627
+    }
+    
+    .form-style{
+      font: 95% Arial, Helvetica, sans-serif;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 16px;
+    
+    }
+    .form-style h1, .form-style a{
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "Times New Roman";
+      text-align: center;
+      margin: -16px -16px 16px -16px;
+      color:#feda6a
+    }
+    .form-style input[type="text"],
+    .form-style input[type="password"],
+    .form-style input[type="date"],
+    .form-style input[type="datetime"],
+    .form-style input[type="email"],
+    .form-style input[type="number"],
+    .form-style input[type="search"],
+    .form-style input[type="time"],
+    .form-style input[type="url"],
+    .form-style textarea,
+    .form-style select
+    {
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%;
+      background: #fff;
+      margin-bottom: 4%;
+      border: 1px solid #ccc;
+      padding: 3%;
+      color:#0000a0 ;
+      font: 95% Arial, Helvetica, sans-serif;
+    }
+    .form-style input[type="text"]:focus,
+    .form-style input[type="password"]:focus,
+    .form-style input[type="date"]:focus,
+    .form-style input[type="datetime"]:focus,
+    .form-style input[type="email"]:focus,
+    .form-style input[type="number"]:focus,
+    .form-style input[type="search"]:focus,
+    .form-style input[type="time"]:focus,
+    .form-style input[type="url"]:focus,
+    .form-style textarea:focus,
+    .form-style select:focus
+    {
+      box-shadow: 0 0 5px #0000a0;
+      padding: 3%;
+      border: 1px solid #0000a0;
+    }
+    
+    .site-form span,label{
+      color: #feda6a;
+    }
+    .errorlist{
+        color: red;
+        font-weight: bold;
+    }
+
+</style>   
+    
+<title>Homepage</title>
+</head>
+<div class="heading">
+
+<p align=center>Audio/Text To Sign Language Tool</p>
+</div>
+<br>
+<body>
+<ul class="nav container">
+  <a class="active" href="{% url 'home' %}">Home</a>
+  <a href="{% url 'animation' %}">Convertor</a>
+  {% if not user.is_authenticated %}
+  <a href="{% url 'signup' %}">Sign Up</a>
+  {% endif %}
+  {% if user.is_authenticated %}
+  <a href="{% url 'logout' %}">Log-Out</a>
+  {% else %}
+  <a href="{% url 'login' %}">Log-in</a>
+  {% endif %}
+  <a href="{% url 'about' %}">About</a>
+</ul>
+
+<div class="wrapper" >
+  {% block content %}
+  {% endblock %}
+</div>
+
+
+</body>
+</html>
